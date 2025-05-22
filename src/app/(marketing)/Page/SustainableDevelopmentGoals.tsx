@@ -4,8 +4,10 @@ import type { SVGProps } from "react";
 export function Eleven(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      height="100%"
       style={{ fillRule: "evenodd", clipRule: "evenodd", strokeLinejoin: "round", strokeMiterlimit: 2 }}
       viewBox="0 0 405 405"
+      width="100%"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -219,8 +221,10 @@ export function Eleven(props: SVGProps<SVGSVGElement>) {
 export function Fifteen(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      height="100%"
       style={{ fillRule: "evenodd", clipRule: "evenodd", strokeLinejoin: "round", strokeMiterlimit: 2 }}
       viewBox="0 0 405 405"
+      width="100%"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -317,8 +321,10 @@ export function Fifteen(props: SVGProps<SVGSVGElement>) {
 export function Fourteen(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      height="100%"
       style={{ fillRule: "evenodd", clipRule: "evenodd", strokeLinejoin: "round", strokeMiterlimit: 2 }}
       viewBox="0 0 405 405"
+      width="100%"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -439,8 +445,10 @@ export function Fourteen(props: SVGProps<SVGSVGElement>) {
 export function Nine(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      height="100%"
       style={{ fillRule: "evenodd", clipRule: "evenodd", strokeLinejoin: "round", strokeMiterlimit: 2 }}
       viewBox="0 0 405 405"
+      width="100%"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -682,8 +690,10 @@ export function Nine(props: SVGProps<SVGSVGElement>) {
 export function Thirteen(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      height="100%"
       style={{ fillRule: "evenodd", clipRule: "evenodd", strokeLinejoin: "round", strokeMiterlimit: 2 }}
       viewBox="0 0 404 404"
+      width="100%"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -798,8 +808,10 @@ export function Thirteen(props: SVGProps<SVGSVGElement>) {
 export function Twelve(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      height="100%"
       style={{ fillRule: "evenodd", clipRule: "evenodd", strokeLinejoin: "round", strokeMiterlimit: 2 }}
       viewBox="0 0 405 405"
+      width="100%"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -1055,12 +1067,24 @@ export default function SustainableDevelopmentGoals() {
           />
         </div>
       </div>
-      <Nine className="col-span-2 lg:col-span-1" />
-      <Eleven className="col-span-2 lg:col-span-1" />
-      <Twelve className="col-span-2 lg:col-span-1" />
-      <Thirteen className="col-span-2 lg:col-span-1" />
-      <Fourteen className="col-span-2 lg:col-span-1" />
-      <Fifteen className="col-span-2 lg:col-span-1" />
+      <div className="col-span-2 lg:col-span-1">
+        <Nine />
+      </div>
+      <div className="col-span-2 lg:col-span-1">
+        <Eleven />
+      </div>
+      <div className="col-span-2 lg:col-span-1">
+        <Twelve />
+      </div>
+      <div className="col-span-2 lg:col-span-1">
+        <Thirteen />
+      </div>
+      <div className="col-span-2 lg:col-span-1">
+        <Fourteen />
+      </div>
+      <div className="col-span-2 lg:col-span-1">
+        <Fifteen />
+      </div>
     </section>
   );
 }
