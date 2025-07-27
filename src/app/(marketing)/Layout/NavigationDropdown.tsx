@@ -16,7 +16,9 @@ function Item(item: Item) {
   const [active, setActive] = useState(false);
   useEffect(() => {
     if (pathname) {
-      setActive(new URL(pathname, location.href).pathname === new URL(item.as ? item.as.toString() : item.href.toString(), location.href).pathname);
+      const activePathname = new URL(pathname, location.href).pathname;
+      const linkPathname = new URL(item.as ? item.as.toString() : item.href.toString(), location.href).pathname;
+      setActive(activePathname === linkPathname || activePathname.startsWith(linkPathname));
     }
   }, [item.as, item.href, pathname]);
   return item.description ? (
@@ -66,9 +68,12 @@ export default function NavigationDropdown(props: { items: Item[]; name: string 
   const [activeDropdown, setActiveDropdown] = useState(false);
   useEffect(() => {
     if (pathname) {
+      const activePathname = new URL(pathname, location.href).pathname;
       setActiveDropdown(
         props.items.some(
-          (item) => new URL(pathname, location.href).pathname === new URL(item.as ? item.as.toString() : item.href.toString(), location.href).pathname,
+          (item) =>
+            activePathname === new URL(item.as ? item.as.toString() : item.href.toString(), location.href).pathname ||
+            activePathname.startsWith(new URL(item.as ? item.as.toString() : item.href.toString(), location.href).pathname),
         ),
       );
     }

@@ -9,7 +9,9 @@ export default function NavigationItem(props: PropsWithChildren<LinkProps>) {
   const [active, setActive] = useState(false);
   useEffect(() => {
     if (pathname) {
-      setActive(new URL(pathname, location.href).pathname === new URL(props.as ? props.as.toString() : props.href.toString(), location.href).pathname);
+      const activePathname = new URL(pathname, location.href).pathname;
+      const linkPathname = new URL(props.as ? props.as.toString() : props.href.toString(), location.href).pathname;
+      setActive(activePathname === linkPathname || activePathname.startsWith(linkPathname));
     }
   }, [pathname, props.as, props.href]);
   return (
